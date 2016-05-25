@@ -3,7 +3,7 @@ My capstone project at ITT Technical Institute in Torrance, CA.
 
 ## Synopsis
 
-My capstone at ITT Technical Institute in Torrance, CA was to create any program. We decided to keep things sweet and simple, meaning less features, but very stable and solid.  We created a note taking app, using a local SQLite database. The whole program was written in JavaFX.
+My capstone at ITT Technical Institute in Torrance, CA was to create any program. We decided to keep things sweet and simple, meaning less features, but very stable and solid.  We created a note taking app, using a local SQLite database. The whole program was written in JavaFX. You must run it in Java 8 (Java 7 won’t work).
 
 See the project page for more information and links: <a href="http://play.rwbay.com/capstone-itt-technical-institute/">play.rwbay.com/capstone-itt-technical-institute</a>
 
