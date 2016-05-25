@@ -7,13 +7,15 @@ My capstone at ITT Technical Institute in Torrance, CA was to create any program
 
 See the project page for more information and links: <a href="http://play.rwbay.com/capstone-itt-technical-institute/">play.rwbay.com/capstone-itt-technical-institute</a>
 
+The project have been compiled and <a href="http://noteworthy.rwbay.com/executable/Noteworthy.jar">packaged as an executable jar here</a>.
+
 ## Installation
 
 Add the source files to your project using any IDE. Add the two jar files, jfxrt.jar and sqlite-jdbc-3.8.11.2.jar, in the 'libraries' folder to the projects build path.
 
 ## API Reference
 
-Read the documentation at http://noteworthy.rwbay.com/javadoc/
+Read the documentation at <a href="http://noteworthy.rwbay.com/javadoc/">noteworthy.rwbay.com/javadoc</a>
 
 ## Contributors
 
