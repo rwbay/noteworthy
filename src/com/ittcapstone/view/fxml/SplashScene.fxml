@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/SplashScene.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ittcapstone.control.SplashSceneController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="169.0" prefWidth="600.0">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text fx:id="titleText1" strokeType="OUTSIDE" strokeWidth="0.0" text="THE" />
+                  <Text fx:id="titleText2" strokeType="OUTSIDE" strokeWidth="0.0" text="TITLE" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text fx:id="txtLoadingL" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="loadingText" text="L" />
+                  <Text fx:id="txtLoadingO" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="loadingText" text="O" />
+                  <Text fx:id="txtLoadingA" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="loadingText" text="A" />
+                  <Text fx:id="txtLoadingD" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="loadingText" text="D" />
+                  <Text fx:id="txtLoadingI" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="loadingText" text="I" />
+                  <Text fx:id="txtLoadingN" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="loadingText" text="N" />
+                  <Text fx:id="txtLoadingG" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="loadingText" text="G" />
+               </children>
+            </HBox>
+            <ProgressBar fx:id="progressBar" maxHeight="-Infinity" prefHeight="10.0" prefWidth="200.0" progress="0.0" styleClass="progress-indicator" />
+         </children>
+      </VBox>
+   </children>
+</StackPane>
