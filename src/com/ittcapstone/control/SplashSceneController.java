@@ -32,7 +32,7 @@ public class SplashSceneController {
      */
     public void initProcess(MainController mainController) {
 
-        System.out.println("* SplashSceneController init process started");
+        //System.out.println("* SplashSceneController init process started");
 
         this.mainController = mainController;
 
@@ -49,17 +49,17 @@ public class SplashSceneController {
 
     private void setMainLogo() {
 
-        System.out.println("* Looking for logo at:");
-        System.out.println("- " + Configurations.getApplicationCompanyLogo());
+        //System.out.println("* Looking for logo at:");
+        //System.out.println("- " + Configurations.getApplicationCompanyLogo());
         URL iconStream = MainController.class.getResource(Configurations.getApplicationCompanyLogo());
         if (iconStream != null) {
             logo.setVisible(true);
-            System.out.println(" - - found image");
-            System.out.println(" - - " + iconStream.toString());
+            //System.out.println(" - - found image");
+            //System.out.println(" - - " + iconStream.toString());
             Image imageLogo = new Image(iconStream.toString());
             logo.setImage(imageLogo);
         } else {
-            System.out.println(" - - DID NOT find logo");
+            //System.out.println(" - - DID NOT find logo");
             logo.setVisible(false);
         }
 
@@ -98,7 +98,7 @@ public class SplashSceneController {
 
     public void startLoadingAnimation() {
 
-        System.out.println("* startLoadingAnimation");
+        //System.out.println("* startLoadingAnimation");
 
         // list of all letters in the animation
         textLoading.add(txtLoadingL);

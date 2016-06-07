@@ -21,18 +21,18 @@ public class SQLiteHelper {
      */
     public void setup() {
 
-        System.out.println("* database setup");
+        //System.out.println("* database setup");
 
         // check configurations file
         if (Configurations.getUseSQLiteDatabase()) {
 
             // look for database
             if (Files.notExists(Paths.get(Configurations.getSQLiteDatabase()))) {
-                System.out.println("- database does not exist");
+                //System.out.println("- database does not exist");
                 querySQLiteInitialData();
             } else {
-                System.out.println("- database already exists");
-                System.out.println("- - " + Configurations.getSQLiteDatabase());
+                //System.out.println("- database already exists");
+                //System.out.println("- - " + Configurations.getSQLiteDatabase());
             }
 
         }
@@ -52,7 +52,7 @@ public class SQLiteHelper {
         try {
             connection = DriverManager.getConnection(url);
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
         }
         return connection;
 
@@ -60,16 +60,16 @@ public class SQLiteHelper {
 
     private void querySQLiteInitialData() {
 
-        System.out.println("* creating new database");
+        //System.out.println("* creating new database");
 
         try (Connection connection = connect()) {
 
             if (connection != null) {
 
                 DatabaseMetaData meta = connection.getMetaData();
-                System.out.println("- new database has been created");
-                System.out.println("- - " + Configurations.getSQLiteDatabase());
-                System.out.println("- - The driver name is " + meta.getDriverName());
+                //System.out.println("- new database has been created");
+                //System.out.println("- - " + Configurations.getSQLiteDatabase());
+                //System.out.println("- - The driver name is " + meta.getDriverName());
 
                 ArrayList<String> initialDataQuery = SQLiteInitialData.getInitialDataQuery();
 
@@ -83,7 +83,7 @@ public class SQLiteHelper {
             }
 
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
         }
 
     }
@@ -94,7 +94,7 @@ public class SQLiteHelper {
      */
     public void query(String sql) {
 
-        System.out.println(" - " + sql);
+        //System.out.println(" - " + sql);
 
         try (Connection connection = connect();
              Statement stmt = connection.createStatement()) {
@@ -102,8 +102,8 @@ public class SQLiteHelper {
             stmt.execute(sql);
 
         } catch (SQLException e) {
-            System.out.println("* SQL query NOT successfully submitted");
-            System.out.println(e.getMessage());
+            //System.out.println("* SQL query NOT successfully submitted");
+            //System.out.println(e.getMessage());
         }
 
     }
@@ -126,7 +126,7 @@ public class SQLiteHelper {
             }
 
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
         }
 
         return entries;
@@ -140,7 +140,7 @@ public class SQLiteHelper {
      */
     public boolean queryInsert(String title, String text) {
 
-        //System.out.println("* queryInsert");
+        ////System.out.println("* queryInsert");
 
         String theDate = "" + System.currentTimeMillis();
 
@@ -157,12 +157,12 @@ public class SQLiteHelper {
             // execute the delete statement
             int result = preparedStatement.executeUpdate();
 
-            //System.out.println("- result: "+result);
+            ////System.out.println("- result: "+result);
 
             if (result > 0) return true;
 
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
         }
 
         return false;
@@ -177,13 +177,13 @@ public class SQLiteHelper {
      */
     public boolean queryUpdate(int id, String title, String text) {
 
-        //System.out.println("* queryUpdate");
+        ////System.out.println("* queryUpdate");
 
         String theDate = "" + System.currentTimeMillis();
 
         String sql = "UPDATE main.NoteEntries SET Title = ?1, Text = ?2, TmStamp = ?3 WHERE id = ?4";
         //String sql = "UPDATE main.NoteEntries SET Title = ? WHERE id = ?";
-        //System.out.println("- "+sql);
+        ////System.out.println("- "+sql);
 
         try (Connection connection = connect();
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -197,12 +197,12 @@ public class SQLiteHelper {
             // execute the delete statement
             int result = preparedStatement.executeUpdate();
 
-            //System.out.println("- result: "+result);
+            ////System.out.println("- result: "+result);
 
             if (result > 0) return true;
 
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
         }
 
         return false;
@@ -229,7 +229,7 @@ public class SQLiteHelper {
             if (result > 0) return true;
 
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
         }
 
         return false;

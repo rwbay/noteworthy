@@ -29,7 +29,7 @@ public class ApplicationFolder {
      */
     public boolean setup() {
 
-        System.out.println("* Setting up application folder *");
+        //System.out.println("* Setting up application folder *");
 
         // Create application folder
         creationResult1 = folderCreate(Configurations.getApplicationFolder());
@@ -53,17 +53,17 @@ public class ApplicationFolder {
      * @return boolean true = created directories, false = could not create.
      */
     public boolean getCreationResult() {
-        System.out.println("- Checking application folder creation result");
+        //System.out.println("- Checking application folder creation result");
         if (creationResult1 && creationResult2 && creationResult3) {
-            System.out.println("- - everything looks good");
+            //System.out.println("- - everything looks good");
             return true;
         } else {
-            if (!creationResult1)
-                System.out.println("- - " + Configurations.getApplicationFolder() + " NOT created successfully");
-            if (!creationResult2)
-                System.out.println("- - " + Configurations.getSQLiteDatabaseFolderName() + " NOT created successfully");
-            if (!creationResult3)
-                System.out.println("- - " + Configurations.getTempFilesFolder() + " NOT created successfully");
+            //if (!creationResult1)
+            //    //System.out.println("- - " + Configurations.getApplicationFolder() + " NOT created successfully");
+            //if (!creationResult2)
+            //    //System.out.printlnn("- - " + Configurations.getSQLiteDatabaseFolderName() + " NOT created successfully");
+            //if (!creationResult3)
+            //    //System.out.println("- - " + Configurations.getTempFilesFolder() + " NOT created successfully");
         }
 
         return false;
@@ -77,27 +77,27 @@ public class ApplicationFolder {
      */
     private boolean folderCreate(String directory) {
 
-        System.out.println("- Checking for directory: " + directory);
+        //System.out.println("- Checking for directory: " + directory);
 
         // Create application folder
         if (Files.notExists(Paths.get(directory))) {
 
-            System.out.println("- - does not already exist");
+            //System.out.println("- - does not already exist");
 
-            System.out.println("- - attempting to create");
+            //System.out.println("- - attempting to create");
             File ApplicationFolderCreate = new File(directory);
             ApplicationFolderCreate.mkdirs();
 
             if (Files.notExists(Paths.get(directory))) {
-                System.out.println("- - - could not create directory");
+                //System.out.println("- - - could not create directory");
                 return false;
             } else {
-                System.out.println("- - - directory created successfully");
+                //System.out.println("- - - directory created successfully");
                 return true;
             }
 
         } else {
-            System.out.println("- - directory already exists");
+            //System.out.println("- - directory already exists");
             return true;
         }
 

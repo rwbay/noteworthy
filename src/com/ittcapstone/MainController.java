@@ -104,7 +104,7 @@ public class MainController {
 
     private void loadSplashScreen() {
 
-        System.out.println("* Splash Scene");
+        //System.out.println("* Splash Scene");
 
         // set the scene
         FXMLLoader fxmlLoader = null;
@@ -112,12 +112,12 @@ public class MainController {
         try {
 
             // load the FXML
-            System.out.println(" - loading the fxml: " + fxmlFileLocation);
+            //System.out.println(" - loading the fxml: " + fxmlFileLocation);
             fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFileLocation));
             Parent root = (Parent) fxmlLoader.load();
 
             // pass parameters to new controller
-            System.out.println(" - running init process on the controller");
+            //System.out.println(" - running init process on the controller");
             splashSceneController = fxmlLoader.<SplashSceneController>getController();
             splashSceneController.initProcess(mainController);
 
@@ -125,7 +125,7 @@ public class MainController {
             splashScene = new Scene(root, getSceneWidth(), getSceneHeight());
 
         } catch (IOException e) {
-            System.out.println(" - unable to find: " + fxmlFileLocation);
+            //System.out.println(" - unable to find: " + fxmlFileLocation);
             e.printStackTrace();
         }
 
@@ -133,7 +133,7 @@ public class MainController {
 
     private void loadPrimaryScene() {
 
-        System.out.println("* Primary Scene");
+        //System.out.println("* Primary Scene");
 
         // set the scene
         FXMLLoader fxmlLoader = null;
@@ -141,12 +141,12 @@ public class MainController {
         try {
 
             // load the FXML
-            System.out.println(" - loading the fxml: " + fxmlFileLocation);
+            //System.out.println(" - loading the fxml: " + fxmlFileLocation);
             fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFileLocation));
             Parent root = (Parent) fxmlLoader.load();
 
             // pass parameters to new controller
-            System.out.println(" - running init process on the controller");
+            //System.out.println(" - running init process on the controller");
             primarySceneController = fxmlLoader.<PrimarySceneController>getController();
             primarySceneController.initProcess(mainController);
 
@@ -154,7 +154,7 @@ public class MainController {
             primaryScene = new Scene(root, getSceneWidth(), getSceneHeight());
 
         } catch (IOException e) {
-            System.out.println(" - unable to find: " + fxmlFileLocation);
+            //System.out.println(" - unable to find: " + fxmlFileLocation);
             e.printStackTrace();
         }
 
@@ -169,8 +169,8 @@ public class MainController {
         setStageFavicon(primaryStage);
 
         // setting the stage position
-        System.out.println(" - resizing stage");
-        System.out.println(" - - display width/height: " + getVisualBoundsWidth() + ", " + getVisualBoundsHeight());
+        //System.out.println(" - resizing stage");
+        //System.out.println(" - - display width/height: " + getVisualBoundsWidth() + ", " + getVisualBoundsHeight());
         primaryStage.setX(getStagePositionX());
         primaryStage.setY(getStagePositionY());
 
@@ -186,7 +186,7 @@ public class MainController {
             primaryStage.setScene(splashScene);
 
             // set the stage
-            System.out.println(" - showing the stage");
+            //System.out.println(" - showing the stage");
             primaryStage.show();
             splashSceneController.startLoadingAnimation();
 
@@ -225,16 +225,16 @@ public class MainController {
 
     private void setStageFavicon(Stage stage) {
 
-        System.out.println(" - setting the favicon");
+        //System.out.println(" - setting the favicon");
         //InputStream iconStream = getClass().getResourceAsStream(Configurations.getApplicationFavicon());
         URL iconStream = getClass().getResource(Configurations.getApplicationFavicon());
         if (iconStream != null) {
-            System.out.println(" - - " + iconStream.toString());
-            System.out.println(" - - found image");
+            //System.out.println(" - - " + iconStream.toString());
+            //System.out.println(" - - found image");
             Image icon = new Image(iconStream.toString());
             stage.getIcons().add(icon);
         } else {
-            System.out.println(" - - DID NOT find image");
+            //System.out.println(" - - DID NOT find image");
         }
 
     }
@@ -273,8 +273,8 @@ public class MainController {
 
         double posX = (getVisualBoundsWidth() / 2) - (getSceneWidth() / 2);
 
-        System.out.println(" - - scene width: " + getSceneWidth());
-        System.out.println(" - - scene X position: " + posX);
+        //System.out.println(" - - scene width: " + getSceneWidth());
+        //System.out.println(" - - scene X position: " + posX);
 
         return posX;
 
@@ -284,8 +284,8 @@ public class MainController {
 
         double posY = (getVisualBoundsHeight() / 2) - (getSceneHeight() / 2);
 
-        System.out.println(" - - scene height: " + getSceneHeight());
-        System.out.println(" - - scene Y position: " + posY);
+        //System.out.println(" - - scene height: " + getSceneHeight());
+        //System.out.println(" - - scene Y position: " + posY);
 
         return posY;
 

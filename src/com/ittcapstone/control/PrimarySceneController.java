@@ -56,7 +56,7 @@ public class PrimarySceneController {
      */
     public void initProcess(MainController mainController) {
 
-        System.out.println("* PrimarySceneController init process started");
+        //System.out.println("* PrimarySceneController init process started");
 
         this.mainController = mainController;
 
@@ -74,7 +74,7 @@ public class PrimarySceneController {
 
     public void postShowStageInitProcess() {
 
-        System.out.println("* PrimarySceneController post show stage init process started");
+        //System.out.println("* PrimarySceneController post show stage init process started");
 
         // hide the flash box
         setInitialFlashBox();
@@ -95,17 +95,17 @@ public class PrimarySceneController {
 
     private void setMainLogo() {
 
-        System.out.println("* Looking for logo at:");
-        System.out.println("- " + Configurations.getApplicationCompanyLogo());
+        //System.out.println("* Looking for logo at:");
+        //System.out.println("- " + Configurations.getApplicationCompanyLogo());
         URL iconStream = MainController.class.getResource(Configurations.getApplicationCompanyLogo());
         if (iconStream != null) {
             logo.setVisible(true);
-            System.out.println(" - - found image");
-            System.out.println(" - - " + iconStream.toString());
+            //System.out.println(" - - found image");
+            //System.out.println(" - - " + iconStream.toString());
             Image imageLogo = new Image(iconStream.toString());
             logo.setImage(imageLogo);
         } else {
-            System.out.println(" - - DID NOT find logo");
+            //System.out.println(" - - DID NOT find logo");
             logo.setVisible(false);
         }
 

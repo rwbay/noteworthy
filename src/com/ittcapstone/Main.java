@@ -25,7 +25,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        System.out.println("* Application Launch called");
+        //System.out.println("* Application Launch called");
 
         /**
          * Starts the main application and GUI
@@ -40,9 +40,9 @@ public class Main extends Application {
         /**
          * Runs the application (GUI section)
          */
-        System.out.println("- - - starting application - - - ");
+        //System.out.println("- - - starting application - - - ");
         launch(args);
-        System.out.println("- - - bye - - -");
+        //System.out.println("- - - bye - - -");
 
     }
 
